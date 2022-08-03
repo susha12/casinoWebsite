@@ -90,25 +90,26 @@ function PlayGames() {
 let input = document.getElementById("input"); //получаем значение введенное в input
 let enter = document.getElementById("enter");
 enter.onclick = myFunc;
-function searchGamws(i) {
-  const element = render("a", { className: "game" }, [
-    render("img", {
-      className: "images",
-      src:
-        "https://static.inpcdn.com/" + box.GameTemplateImages[send[i].ID].Url,
-    }),
-    render("h3", {
-      className: "titles",
-      textContent: box.GameTemplateNameTranslations[send[i].ID].Value,
-    }),
-  ]);
-  articleDiv.appendChild(element);
-}
+// function searchGamws(i) {
+//   const element = render("a", { className: "game" }, [
+//     render("img", {
+//       className: "images",
+//       src:
+//         "https://static.inpcdn.com/" + box.GameTemplateImages[send[i].ID].Url,
+//     }),
+//     render("h3", {
+//       className: "titles",
+//       textContent: box.GameTemplateNameTranslations[send[i].ID].Value,
+//     }),
+//   ]);
+//   articleDiv.appendChild(element);
+// }
 function myFunc() {
   let searchWord = input.value.toLowerCase();
   if (input.value === "") {
-    btnMore.style.display = "none";
-    return (articleDiv.innerHTML = `<h3 class="gameNone">თამაში ასეთი სახელით არ მოიძებნა</h3>`);
+    btnMore.style.display = "flex";;
+    PlayGames()
+    // return (articleDiv.innerHTML = `<h3 class="gameNone">თამაში ასეთი სახელით არ მოიძებნა</h3>`);
   } else {
     btnMore.style.display = "none";
   }
