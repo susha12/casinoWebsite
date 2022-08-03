@@ -4,7 +4,6 @@ let textBox = document.querySelectorAll(".game h5");
 let box;
 let send;
 let index = "";
-
 fetch("https://mystake.com/api/game/getgametemplates/1/1/1")
   .then(function (response) {
     return response.json();
@@ -59,12 +58,10 @@ const render = (tag, properties = null, children = null) => {
   }
   return element;
 };
-let textNoGames = document.querySelector(".gameNone")
+let textNoGames = document.querySelector(".gameNone");
 let articleDiv = document.querySelector("section.games");
 let btnMore = document.querySelector(".button");
 btnMore.addEventListener("click", PlayGames);
-
-
 let num = 0;
 function PlayGames() {
   for (let i = 0; i <= 59; i++) {
@@ -74,7 +71,7 @@ function PlayGames() {
     let matchText = box.GameTemplateNameTranslations.find((item) => {
       return item.GameTemplateId === send[num].ID;
     });
-    console.log(match);
+    // console.log(match);
     const element = render("a", { className: "game" }, [
       render("img", {
         className: "images",
@@ -89,7 +86,6 @@ function PlayGames() {
     num = num + 1;
   }
 }
-
 //  работа поиска на саите
 let input = document.getElementById("input"); //получаем значение введенное в input
 let enter = document.getElementById("enter");
@@ -111,18 +107,14 @@ function searchGamws(i) {
 function myFunc() {
   let searchWord = input.value.toLowerCase();
   if (input.value === "") {
-    // PlayGames();
-    console.log("yes");
-    btnMore.style.display = "flex";
+    btnMore.style.display = "none";
     return (articleDiv.innerHTML = `<h3 class="gameNone">თამაში ასეთი სახელით არ მოიძებნა</h3>`);
-    
   } else {
     btnMore.style.display = "none";
   }
   const result = box.GameTemplateNameTranslations.filter((item) => {
     return item.Value?.toLowerCase().includes(searchWord);
   });
-  console.log("myFunc", result);
   if (result.length === 0) {
     return (articleDiv.innerHTML = "თამაში ასეთი სახელით არ მოიძებნა");
   }
