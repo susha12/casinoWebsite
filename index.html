@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>კაზინოს გვერდი</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body >
+    <img src="img/loader.png" alt="loader" class="loader">
+    <!-- section ourSite -->
+    <div class="ourSite">
+      <!-- section header -->
+      <header>
+        <nav>
+          <ul>
+            <li><a href="#">Sports</a></li>
+            <li class="active"><a href="#">In-Play</a></li>
+            <li><a href="#">Casino</a></li>
+            <li><a href="#">Live Casino</a></li>
+            <li><a href="#">Virtual Sports</a></li>
+          </ul>
+        </nav>
+        <div class="register_box">
+          <button class="join">Join</button>
+          <button class="log-in">Log In</button>
+        </div>
+      </header>
+      <section class="advertising">
+        <a href="#"><img src="img/banner.webp" alt="banner.webp" /></a>
+        <a href="#"><img src="img/banner.webp" alt="banner.webp" /></a>
+      </section>
+
+
+      <!-- section games information -->
+      <section class="informationBar">
+        <div class="allGames_information">
+          <div class="box_allGames_name active">All Games <div class="box_allGames_info">(3659)</div> </div>
+          <div class="box_allProviders_name">All Providers </div>
+          <div class="search-container">
+              <input type="text" placeholder="Search Games..." name="search" class="inputGames" id="input">
+              <button type="submit" class="btn"  id="enter">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                width="30" height="30"
+                viewBox="0 0 30 30"
+                style=" fill:#9b9b9b;"><path d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"></path></svg>
+              </button>
+          </div>
+        </div>
+            <!-- section allGames_information -->
+        <div class="allGames_information two">
+          <div class="box_video">
+            <img src="img/playBtn.png" alt="icon.png" class="games_information__icon">
+            <p class="games_information__titles">Video Slots</p>
+          </div>
+          <div class="box_slots">
+            <img src="img/starsBtn.png" alt="icon.png" class="games_information__icon">
+            <p class="games_information__titles">Popular Slots</p>
+          </div>
+          <div class="box_FAV">
+            <img src="img/heartBtn.png" alt="icon.png" class="games_information__icon">
+            <p class="games_information__titles">Fav</p>
+          </div>
+          <div class="box_NewGames">
+            <img src="img/starsRadiusBtn.png" alt="icon.png" class="games_information__icon">
+            <p class="games_information__titles">New Games</p>
+          </div>
+          <div class="box_TableGames">
+            <img src="img/stampBtn.png" alt="icon.png" class="games_information__icon">
+            <p class="games_information__titles">Table Games</p>
+          </div>
+          <div class="box_Jackpot">
+            <img src="img/sevenBtn.png" alt="icon.png" class="games_information__icon">
+            <p class="games_information__titles">Jackpot Games</p>
+          </div>
+          <div class="box_VideoPoker">
+            <img src="img/deckBtn.png" alt="icon.png" class="games_information__icon">
+            <p class="games_information__titles">Video Pocker</p>
+          </div>
+          <div class="box_More">
+            <img src="img/pluseBtn.png" alt="icon.png" class="games_information__icon">
+            <p class="games_information__titles">Vore</p>
+          </div>
+        </div>
+      </section>
+       <!-- section allGames_information -->
+      <section class="games" id="out">
+      </section>
+      <button class="button" style="vertical-align:middle"><span>Show More </span></button>
+      <div class="article"></div>
+      <script src="main.js"></script>
+    </div>
+  </body>
+</html>

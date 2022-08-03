@@ -1,0 +1,340 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* body style */
+body {
+  background-color: #383838;
+}
+img.loader {
+  animation: linear 3s loader infinite;
+  display: flex;
+  margin: auto;
+  top: calc(50% - 46px);
+  left: calc(50% - 46px);
+  position: absolute;
+}
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background: linear-gradient(180deg, #383838, gold, #383838);
+}
+/* section ourSite */
+.ourSite {
+  display: none;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #383838;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+/* section header */
+header {
+  background-color: #1c1c1c;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 575px;
+  margin-left: 230px;
+}
+ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 0px;
+  height: 100%;
+}
+li {
+  list-style-type: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+li.active {
+  border-bottom: 2px solid gold;
+}
+a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.register_box {
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 40px;
+  font-size: 22px;
+}
+.join {
+  background-color: #fff209;
+  width: 74px;
+  height: 40px;
+  font-weight: 900;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.log-in {
+  height: 40px;
+  font-weight: 900;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+.advertising {
+  height: 215px;
+  width: 1270px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 21px;
+}
+.advertising > a {
+  width: calc(1245px / 2);
+  height: 100%;
+  overflow: hidden;
+}
+.advertising > a > img {
+  margin-top: 80px;
+  width: 1250px;
+}
+
+/* section allGames_information */
+.games {
+  width: 1270px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+a.game {
+  height: 224px;
+  width: 207px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  overflow: hidden;
+}
+img.images {
+  height: 166px;
+  cursor: pointer;
+}
+h3.titles {
+  color: #737373;
+  margin: 0px;
+  margin: 15px auto 7px;
+  font-size: 18px;
+  text-align: center;
+  max-width: 175px;
+  cursor: pointer;
+}
+
+/* btn styles */
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 24px;
+  padding: 15px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 30px;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button:hover span {
+  padding-right: 25px;
+}
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* section info favorit games */
+.informationBar {
+  width: 100%;
+  max-width: 1270px;
+  margin-top: 24px;
+  margin-bottom: 20px;
+  height: 215px;
+  display: flex;
+  flex-direction: column;
+  background-color: #494949;
+}
+.allGames_information:first-child {
+  height: 85px;
+  width: 100%;
+  display: flex;
+  padding-left: 40px;
+  border-bottom: 2px solid #9b9b9b;
+}
+.box_allGames_name {
+  position: relative;
+  width: 180px;
+  height: 50px;
+  color: white;
+  font-size: 22px;
+  display: flex;
+  margin-top: 14px;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.box_allGames_name.active::after {
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.644);
+}
+.box_allGames_info {
+  display: inline-block;
+  color: gold;
+}
+.box_allProviders_name {
+  margin: 0px 28px;
+  color: white;
+  font-size: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.box_allProviders_name::after {
+  content: "";
+  border: solid rgb(255, 255, 255);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 6px;
+  transform: rotate(45deg);
+  margin-left: 7px;
+  margin-bottom: 5px;
+}
+.search-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.inputGames {
+  border: 2px solid #9b9b9b;
+  height: 38px;
+  margin-bottom: 10px;
+  background-color: #494949;
+  font-size: 20px;
+  margin-top: 15px;
+  padding-right: 35px;
+  width: 220px;
+  color: white;
+}
+.btn {
+  background-color: rgba(255, 0, 0, 0);
+  border: none;
+  position: absolute;
+  right: 0px;
+  top: 18px;
+  z-index: 100;
+  cursor: pointer;
+}
+.allGames_information.two {
+  width: 100%;
+  height: 156px;
+  color: #9b9b9b;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 40px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.allGames_information.two > div {
+  width: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding-top: 20px;
+}
+.allGames_information.two > div > img {
+  width: 50px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.allGames_information.two > div > p {
+  text-align: center;
+  margin-top: 5px;
+}
+
