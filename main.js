@@ -59,9 +59,12 @@ const render = (tag, properties = null, children = null) => {
   }
   return element;
 };
+let textNoGames = document.querySelector(".gameNone")
 let articleDiv = document.querySelector("section.games");
 let btnMore = document.querySelector(".button");
 btnMore.addEventListener("click", PlayGames);
+
+
 let num = 0;
 function PlayGames() {
   for (let i = 0; i <= 59; i++) {
@@ -108,9 +111,11 @@ function searchGamws(i) {
 function myFunc() {
   let searchWord = input.value.toLowerCase();
   if (input.value === "") {
-    PlayGames();
+    // PlayGames();
     console.log("yes");
     btnMore.style.display = "flex";
+    return (articleDiv.innerHTML = `<h3 class="gameNone">თამაში ასეთი სახელით არ მოიძებნა</h3>`);
+    
   } else {
     btnMore.style.display = "none";
   }
